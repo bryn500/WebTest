@@ -1,0 +1,37 @@
+{
+  "OutputDir": "c:\\sites\\webtest\\results",
+  "Servers": [
+    "https://abc.io",
+    "https://abc2.io",
+    "https://fail.test.io"
+  ],
+  "URLs": [
+    "/",
+    "/search",
+    "/search/testsearch",
+    "/category",
+    "/product",    
+    "/404",
+    "/500",
+    "/blog"
+  ],
+  "URLSources": [
+    "/sitemap.xml"
+  ],
+  "TextReplacements": [
+    {
+      "Input": "#Server1#",
+      "Output": "#Server0#"
+    },
+    {
+      "Input": "#Server2#",
+      "Output": "#Server0#"
+    }
+  ],
+  "RegexReplacements": [
+    {
+      "Input": "\\?v=[0-9]{12,12}",
+      "Output": "?v=version"
+    }
+  ]
+}
